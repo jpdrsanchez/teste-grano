@@ -1,4 +1,4 @@
-# Teste Solare Interativa | Vaga Desenvolvedor Web
+# Teste Grano Studio | Vaga Desenvolvedor Web
 
 [Acesse](https://jpdrsanchez.github.io/teste-solare-interativa/)
 
