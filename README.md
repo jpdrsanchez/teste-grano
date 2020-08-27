@@ -1,6 +1,6 @@
 # Teste Grano Studio | Vaga Desenvolvedor Web
 
-[Acesse](https://jpdrsanchez.github.io/teste-solare-interativa/)
+[Acesse](https://jpdrsanchez.github.io/teste-grano/)
 
 Técnologias utilizadas no projeto:
 
