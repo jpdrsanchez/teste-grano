@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste | Grano Studio</title>
+  <link rel="stylesheet" href="dist/css/main.css">
+</head>
+<body>
+  <div class="page">
+    <div class="page__wrapper">
+      <header class="header">
+        <a href="#" class="header__logo" alt="Life Style Project">
+          <img src="./images/logo.png" alt="Life Style Project Logotipo">
+        </a>
+      </header>
+      <main class="main">
+        <h1 class="main__title">
+          Nós ajudamos você a chegar no topo.
+        </h1>
+        <p class="main__text">
+          Estamos a um passo além do coach. Com o auxílio de técnicas do <em>DeRose Method</em> potencializamos, sua capacidade de realização.
+        </p>
+        <ul class="main__list">
+          <li class="main__item item">
+            <span class="item__number">1</span>
+            <span class="item__text">Alinhamento das expectativas e planejamento</span>
+          </li>
+          <li class="main__item item">
+            <span class="item__number">2</span>
+            <span class="item__text">Avaliação do desenvolvimento pessoal</span>
+          </li>
+          <li class="main__item item">
+            <span class="item__number">3</span>
+            <span class="item__text">De nição de metas e objetivos</span>
+          </li>
+          <li class="main__item item">
+            <span class="item__number">4</span>
+            <span class="item__text">Mapeamento de ações cotidianas para conquistar os objetivos</span>
+          </li>
+        </ul>
+      </main>
+
+      <section class="call">
+
+        <form class="form" action="#">
+          <div class="form__input-box">
+            <input class="form__input" type="text" name="name" id="name">
+            <label class="form__label" for="name">Nome</label>
+            <span class="form__error-message">O nome não pode estar vazio</span>
+          </div>
+          <div class="form__input-box">
+            <input class="form__input" type="email" name="email" id="email">
+            <label class="form__label" for="email">Email</label>
+            <span class="form__error-message">Isso não parece um endereço de e-mail</span>
+          </div>
+          <div class="form__input-box">
+            <input class="form__input" type="tel" name="phone" id="phone">
+            <label class="form__label" for="phone">Telefone</label>
+            <span class="form__error-message">O telefone não pode estar vazio</span>
+          </div>
+          <div class="form__input-box">
+            <input class="form__input" type="number" name="age" id="age">
+            <label class="form__label" for="age">Idade</label>
+            <span class="form__error-message">Idade não pode estar vazia</span>
+          </div>
+          <div class="form__input-box">
+            <input class="form__input" type="number" name="test" id="test">
+            <label class="form__label" for="test">2 + 5 = ?</label>
+            <span class="form__error-message">O teste está incorreto</span>
+          </div>
+          <button class="form__button" type="submit">Quero atingir meus objetivos</button>
+        </form>
+
+      </section>
+
+    </div>
+  </div>
+  <script src="./dist/js/main.js"></script>
+</body>
+</html>

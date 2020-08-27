@@ -1,0 +1,263 @@
+// ===========================================================
+// Estilos Base - Teste | Grano Studio
+//
+// 1. Geral
+// 2. Header
+// 3. Main
+// 4. Call
+// 5. Form
+//
+// ===========================================================
+
+// -----------------------------------------------------------
+// 1. Geral
+// -----------------------------------------------------------
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  display: block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: $main-font;
+  color: $white;
+}
+
+.page {
+  background: url('../../images/bg-dark.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 600px;
+  @include breakpoint-up(large) {
+    height: 100vh;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: rem(1200);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: rem(15);
+    padding-right: rem(15);
+  }
+}
+
+// -----------------------------------------------------------
+// 2. Header
+// -----------------------------------------------------------
+.header {
+  max-width: rem(1200);
+  margin-left: auto;
+  margin-right: auto;
+  padding: rem(35) rem(15) rem(130) rem(15);
+  flex: 1 1 100%;
+
+  @include breakpoint-less(large) {
+    padding-bottom: rem(65);
+  }
+}
+
+// -----------------------------------------------------------
+// 3. Main
+// -----------------------------------------------------------
+.main {
+  flex: 0 0 100%;
+
+  @include breakpoint-up(large) {
+    max-width: rem(630);
+  }
+
+  &__title {
+    font-size: rem(30);
+    line-height: 1.4;
+
+    @include breakpoint-less(small) {
+      max-width: rem(400);
+      margin: 0 auto rem(10) auto;
+    }
+
+    @include breakpoint-up(small) {
+      font-size: rem(34);
+    }
+  }
+
+  &__text {
+    font-size: rem(18);
+    line-height: 1.2;
+    margin-bottom: rem(45);
+
+    @include breakpoint-less(small) {
+      max-width: rem(400);
+      margin: 0 auto rem(45) auto; 
+    }
+
+    @include breakpoint-up(small) {
+      font-size: rem(24);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 0 0 300px;
+    display: flex;
+    align-items: center;
+    @include breakpoint-up(small) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    @include breakpoint-less(small) {
+      margin: 0 auto;
+    }
+
+    &:not(:last-child) {
+      @include breakpoint-less(small) {
+        margin-bottom: rem(30);
+      }
+    }
+
+    &:nth-child(-n+2) {
+      @include breakpoint-up(small) {
+        margin-bottom: rem(30);
+      }
+    }
+  }
+}
+
+.item {
+  &__number {
+    display: block;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: rem(32);
+    border: 2px solid $white;
+    border-radius: 50%;
+    margin-right: rem(15);
+    flex: 0 0 50px;
+  }
+
+  &__text {
+    flex: 1;
+    @include breakpoint-up(small) {
+      padding-right: rem(85);
+    }
+  }
+}
+
+// -----------------------------------------------------------
+// 4. Call
+// -----------------------------------------------------------
+.call {
+  width: 300px;
+  @include breakpoint-less(large) {
+    margin: 0 auto;
+    padding-top: rem(65);
+    padding-bottom: rem(45);
+  }
+
+  @include breakpoint-less(small) {
+    flex: 1;
+  }
+}
+// -----------------------------------------------------------
+// 5. Form
+// -----------------------------------------------------------
+.form {
+  * {
+    display: block;
+    width: 100%;
+  }
+
+  &__input-box {
+    position: relative;
+  }
+
+  &__label {
+    font-size: rem(18);
+    color: $black;
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    cursor: text;
+    transition: .2s linear;
+
+    &.active {
+      font-size: rem(10);
+      top: 2px;
+    }
+  }
+
+  &__input {
+    padding: rem(15) rem(16);
+    background-color: transparentize($white, $amount: .2);
+    border: 0;
+    outline: 0;
+    margin-bottom: rem(20);
+
+    &:focus {
+      border: 2px solid $orange;
+      & + .form__label {
+        font-size: rem(10);
+        top: 2px;
+      }
+    }
+  }
+
+  &__button {
+    background-color: $orange;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding: rem(15) rem(0);
+    color: $white;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  &__error-message {
+    position: absolute;
+    bottom: -15px;
+    font-size: rem(10);
+    font-weight: bold;
+    color: $black;
+    display: none;
+    padding: rem(5);
+    background-color: rgb(231, 98, 98);
+
+    &.active {
+      display: block;
+    }
+  }
+}

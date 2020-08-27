@@ -1,0 +1,58 @@
+// ===========================================================
+// Variáveis e Mixins - Teste | Grano Studio
+//
+// 1. Cores
+// 2. Fontes
+// 3. Breakpoints
+// 4. Utilitários
+//
+// ===========================================================
+
+// -----------------------------------------------------------
+// 1. Cores
+// -----------------------------------------------------------
+$white: #fff;
+$orange: #f6871e;
+$black: #000;
+
+// -----------------------------------------------------------
+// 2. Fontes
+// -----------------------------------------------------------
+$main-font: sans-serif;
+
+// -----------------------------------------------------------
+// 3. Breakpoints
+// -----------------------------------------------------------
+$breakpoints: (
+  small: 600,
+  medium: 900,
+  large: 1024,
+  x-large: 1200
+);
+
+@mixin breakpoint-up($breakpoint) {
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+  @media (min-width: em($breakpoint-value)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-less($breakpoint) {
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+  @media (max-width: em($breakpoint-value - 1)) {
+    @content;
+  }
+}
+
+// -----------------------------------------------------------
+// 4. Utilitários
+// -----------------------------------------------------------
+@function rem($size) {
+  @return $size / 16 + rem;
+}
+
+@function em($size) {
+  @return $size / 16 + em;
+}
